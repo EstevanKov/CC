@@ -15,7 +15,7 @@ describe('Pruebas e2e de usuarios', ()=>{
         app=module.createNestApplication();
         await app.init();
 
-        jwToken= 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInN1YiI6MywiaWF0IjoxNzI1MTE3MDQ5LCJleHAiOjE3MjUxMjA2NDl9.F-fs4nxNT0AHYS9itE-QIh_bckzYTGYXkeEJQN6_23I'
+        jwToken= 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInN1YiI6MSwiaWF0IjoxNzI1MTQ2NzY3LCJleHAiOjE3MjUxNTAzNjd9.gdNdboiXNcNI3dGPTOGx7-XhyRssxyd4En_hfHrSCzM'
     });
         it('POST: /users/register debe crear un nuevo usuario y mostrarlo', async ()=>{
             const response = await request(app.getHttpServer()).post('/users/register').send({
