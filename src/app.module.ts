@@ -12,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: process.env.DATABASE_HOST || 'db', 
+      host: process.env.DATABASE_HOST || 'mysql.railway.internal', 
       port: parseInt(process.env.DATABASE_PORT, 10) || 3306,
       username: process.env.DATABASE_USER || 'admin',
       password: process.env.DATABASE_PASSWORD || 'admin',
