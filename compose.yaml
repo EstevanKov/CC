@@ -10,9 +10,9 @@ services:
     environment:
       - DATABASE_HOST= mysql.railway.internal #db            
       - DATABASE_PORT=3306
-      - DATABASE_USER=admin
-      - DATABASE_PASSWORD=admin
-      - DATABASE_NAME=integradora2
+      - DATABASE_USER= root #admin
+      - DATABASE_PASSWORD= yQtNojINnjrIeNMEoYqpqmXkDjfMKHJu #admin
+      - DATABASE_NAME= railway #integradora2
     depends_on:
       - db
 
