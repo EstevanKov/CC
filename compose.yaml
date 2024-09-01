@@ -8,10 +8,10 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_HOST=db
+      - DATABASE_HOST=db            
       - DATABASE_PORT=3306
-      - DATABASE_USER=root
-      - DATABASE_PASSWORD=  # Contraseña vacía
+      - DATABASE_USER=admin
+      - DATABASE_PASSWORD=admin
       - DATABASE_NAME=integradora2
     depends_on:
       - db
@@ -19,11 +19,11 @@ services:
   db:
     image: mysql:8.0
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"  # Permitir contraseñas vacías
       MYSQL_DATABASE: integradora2
-      MYSQL_USER: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin           
     volumes:
       - mysql_data:/var/lib/mysql
 
