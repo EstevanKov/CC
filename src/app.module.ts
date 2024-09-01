@@ -15,7 +15,7 @@ import { AuthModule } from './auth/auth.module';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: 'admin',
+      username: 'root',
       password: '',
       database: 'integradora2',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
