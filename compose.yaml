@@ -8,7 +8,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_HOST= db            
+      - DATABASE_HOST= mysql.railway.internal #db            
       - DATABASE_PORT=3306
       - DATABASE_USER=admin
       - DATABASE_PASSWORD=admin
