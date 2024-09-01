@@ -15,11 +15,11 @@ import { AuthModule } from './auth/auth.module';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: 'root',
+      username: 'admin',
       password: '',
       database: 'integradora2',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: false
+      synchronize: true
     }),
     UsersModule, MedicationsModule, ShedulesModule, NotificationsModule, AuthModule],
   controllers: [AppController],
