@@ -8,7 +8,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_HOST=db            
+      - DATABASE_HOST= db            
       - DATABASE_PORT=3306
       - DATABASE_USER=admin
       - DATABASE_PASSWORD=admin
@@ -21,9 +21,15 @@ services:
     ports:
       - "3307:3306"
     environment:
-      MYSQL_DATABASE: integradora2
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: admin           
+      MYSQL_DATABASE: railway #integradora2
+      MYSQL_USER: root #admin
+      MYSQL_PASSWORD: yQtNojINnjrIeNMEoYqpqmXkDjfMKHJu #admin
+      MYSQLHOST: mysql.railway.internal
+      MYSQL_PUBLIC_URL: mysql://root:yQtNojINnjrIeNMEoYqpqmXkDjfMKHJu@autorack.proxy.rlwy.net:12960/railway
+      MYSQL_URL: mysql://root:yQtNojINnjrIeNMEoYqpqmXkDjfMKHJu@mysql.railway.internal:3306/railway
+
+   
+
     volumes:
       - mysql_data:/var/lib/mysql
 
