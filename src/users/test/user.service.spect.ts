@@ -1,5 +1,4 @@
 import { Test, TestingModule } from "@nestjs/testing";
-import { JwtService } from "@nestjs/jwt";
 import { Repository } from "typeorm";
 import { getRepositoryToken } from "@nestjs/typeorm";
 import { Users } from "../../users/users.entity";
@@ -7,8 +6,6 @@ import * as bcrypt from 'bcrypt'
 import { AuthService } from "../../auth/auth.service"
 ;
 import { UsersService } from "../users.service";
-import { create } from "domain";
-import { generate } from "rxjs";
 import { usersNew } from "users/users.dto";
 
 describe('UserService',()=>{

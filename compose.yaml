@@ -4,15 +4,15 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile  
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_HOST= mysql.railway.internal #db            
+      - DATABASE_HOST=db
       - DATABASE_PORT=3306
-      - DATABASE_USER= root #admin
-      - DATABASE_PASSWORD= yQtNojINnjrIeNMEoYqpqmXkDjfMKHJu #admin
-      - DATABASE_NAME= railway #integradora2
+      - DATABASE_USER=admin
+      - DATABASE_PASSWORD=admin
+      - DATABASE_NAME=integradora2
     depends_on:
       - db
 
@@ -21,15 +21,9 @@ services:
     ports:
       - "3307:3306"
     environment:
-      MYSQL_DATABASE: railway #integradora2
-      MYSQL_USER: root #admin
-      MYSQL_PASSWORD: yQtNojINnjrIeNMEoYqpqmXkDjfMKHJu #admin
-      MYSQLHOST: mysql.railway.internal
-      MYSQL_PUBLIC_URL: mysql://root:yQtNojINnjrIeNMEoYqpqmXkDjfMKHJu@autorack.proxy.rlwy.net:12960/railway
-      MYSQL_URL: mysql://root:yQtNojINnjrIeNMEoYqpqmXkDjfMKHJu@mysql.railway.internal:3306/railway
-
-   
-
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"  # Permitir contraseñas vacías
+      MYSQL_DATABASE: integradora2
+      MYSQL_USER: root
     volumes:
       - mysql_data:/var/lib/mysql
 
